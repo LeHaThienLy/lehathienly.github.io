@@ -88,6 +88,9 @@ ul.list-item {
     width: 100%;
     height: 100%; }
 
+@media screen and (max-height: 400px) {
+  .side-bar {
+    overflow: scroll; } }
 @media screen and (max-width: 780px) {
   ul.list-item {
     font-size: 18px; }
@@ -101,7 +104,7 @@ ul.list-item {
     border-bottom: 1px solid;
     box-shadow: 0px 5px 30px #252b37;
     z-index: 1000; }
-    .side-bar .nav-vertical, .side-bar .content, .side-bar .menu-items {
+    .side-bar .content, .side-bar .menu-items {
       margin: 0; }
     .side-bar .avatar, .side-bar .info {
       display: none; }
@@ -115,20 +118,22 @@ ul.list-item {
 
   .nav-vertical {
     width: 100vw;
-    position: absolute;
-    top: 70px;
-    left: 0;
+    margin-top: 80px;
+    margin-bottom: 0;
     display: none;
+    opacity: 0;
     z-index: 0;
     background: #252b37;
     transition: all .5s; }
 
   .show-menu {
     display: block;
-    z-index: 10; }
+    opacity: 1;
+    z-index: 10;
+    margin-top: 70px; }
 
   ul.list-item {
-    font-size: 20px; } }
+    font-size: 18px; } }
 .vertical-toggle {
   border: none;
   width: 27px;

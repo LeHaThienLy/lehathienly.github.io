@@ -36,7 +36,7 @@ $(document).ready(function(){
     //---------------------------------------
     $("#btn-close").on("click", function(){
         $("#btn-close").toggleClass("active");
-        $("#nav").slideToggle("slow");
+        $("#nav").toggleClass('show-menu');
 
     });
 
